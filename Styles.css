@@ -1,0 +1,349 @@
+:root {
+    /* Light Mode */
+    --bg-color: lightgray;
+    --text-color: black;
+
+    /* Accent Colors */
+    --accent-color-light: #d2cff5;
+    --accent-color-medium: #684fb5;
+    --accent-color-dark: #cf7058;
+    --accent-color-darkest: #cf7058;
+    --accent-color-green: #287deb;
+
+    /* Error Colors */
+    --error-color: red;
+}
+
+body {
+   /* Add a background color or image */
+
+   /* Customize the default size, color, and font for text*/
+   font-size: 22px;
+   font-family: Tahoma, sans-serif; /* This tells the browser: "Try to use `Tahoma`, and if you can't find it, use any sans-serif font." */
+
+   /* Put space around the edges of the webpage */
+   margin: 5%;
+   background-color: var(--bg-color);
+   color: var(--text-color);
+}
+
+h1 {
+  background-color: plum;
+  border-radius: 10px;
+  color: black;
+  font-size: 45px;
+}
+
+h3 {
+  background-color: plum;
+  font-size: 35px;
+}
+
+h4 {
+  background-color: plum;
+  font-size: 30px;
+}
+
+h5 {
+  background-color: plum;
+  font-size: 20px;
+}
+
+p {
+  font-size: 20px;
+  color: black;
+}
+
+a:link  {
+  color: black;
+}
+
+a:visited {
+  color: blue;
+}
+
+a:hover {
+  color: red;
+}
+
+a:active {
+  color: purple;
+}
+
+/*** header ***
+  
+  Purpose:
+  - Add style rules for your website's header section
+
+  When To Modify:
+  - [X] Project 3 (REQUIRED FEATURE) 
+  - [ ] Project 4 (REQUIRED FEATURE) 
+  - [ ] Any time after
+***/
+.header-container {
+  display: flex;
+  flex-direction: row;
+  font-family: 'Courier New';
+  padding-top: 10px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.header-item:nth-of-type(1) {
+  width: 50%;
+}
+
+.header-img {
+  margin: 0 10%;
+  width: 5%;
+  max-width: 75%; /** the cap on how large an immage appears **/
+}
+
+.header-button {
+  background-color: lightcoral;
+  text-align: center;
+  font-size: 30px;
+  padding:5%;
+  margin: 10%;
+  border: 5px solid black;
+  cursor: pointer;
+}
+
+button {
+  background-color: lightblue;    /* button color */
+  color: black;               /* text color */
+  border: blue;               /* hides the default border */
+  padding: 5px;          /* space between button's text and edge */
+  border-radius: 15%;         /* curved edges instead of square */
+  cursor: pointer;            /* makes the cursor change when over button */
+}
+
+.navbar ul {
+  z-index: 1000; /* Ensures the navbar is on top of other elements */
+  list-style: none;
+  overflow: hidden;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 100%;
+  margin-bottom: 10px;            
+}
+
+.navbar ul li { 
+  float: left;
+  margin: 10px;
+}
+
+.navbar ul li a { /*-anything inside the ul li w/ "a"-->*/
+  display: block;
+  text-decoration: none;
+  color: lightblue; 
+  padding: 10%;
+}
+
+.navbar ul li a:hover {
+  color: purple;
+}
+
+.theme-button { /*special rules for theme button*/
+  text-decoration: wavy;
+  background-color: lightblue;
+  color: black;
+  font-family:'Courier New';
+  border-color: 5px blue;
+}
+
+.theme-button { /*special rules for theme button*/
+  text-decoration: wavy;
+  background-color: lightblue;
+  color: black;
+  font-family:'Courier New';
+  border-color: blue;
+}
+
+.Event-Breakdown-container {
+  display: flex; 
+  border: 10px rgb(230, 30, 30) solid;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.Event-Breakdown-container > div {  /*Everything inside the event breakdown section has these rules*/
+  flex: 1;
+  box-sizing: border-box;
+  padding: 15px;
+  border: 10px solid goldenrod;
+}
+
+.actor-highlights {
+  display: flex;
+  border:15 px solid rgb(152, 121, 236);
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.actor-highlights > div {
+  flex: 1;
+  box-sizing: border-box;
+  border: 5px rgb(19, 108, 224) solid;
+  justify-content:space-between;
+  color: black;
+}
+
+.movie-trailers {
+  display: flex;
+  border: 15px lightcyan solid;
+  flex-direction: row;  /*Main axis*/
+  justify-content: space-around;  /*align on cross axis: space evenly 3 columns*/ 
+}
+
+.movie-trailers > div { /*add these rules to every div inside "movie trailers" class */
+  border: 5px gold solid;
+  background-color: rgb(103, 177, 245); /*change colors later*/
+  padding: 15px 15px;
+}
+
+.video-container {
+    position: relative; 
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin-bottom: 1rem;
+}
+
+.video-container iframe {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.dark-mode.movie-trailers {
+  background-color: darkred;
+}
+
+.dark-mode.movie-trailers > div {
+  background-color: darkred;
+  color: white; 
+}
+
+
+/*** RSVP [PLACEHOLDER] ***/
+.rsvp-form-containter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+#Submit-rsvp button {
+  color: purple;
+}
+
+.rsvp-para {
+  color: blue;
+  width: 55%;
+  padding-right: 10px;
+}
+
+.rsvp-participants {
+  width: 45%;
+  padding-right: 10px;
+}
+
+.error {
+  border: 2px solid red;
+  background-color: pink;
+  /* Set border-color and background */
+}
+
+
+/*** Animations***/
+.modal {
+  display: none;   
+  position: fixed; /* modal cannot move around the screen */
+  z-index: 2;      /* modal appears above other elements */ 
+  
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  /* Add a semi-transparent background to shadow non-modal elements*/
+  background-color: rgba(161, 39, 227, 0.4); /* 40% opacity black */
+
+  /* Flexbox settings for modal */
+  /* These won't apply until we update "display:" from "hidden" to "flex" in our JS */
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-container {
+    /* Change modal size and spacing here */
+  padding: 50px;
+  width: 55%;
+
+    /* Customize modal style here */
+  background-color: lightsteelblue;
+  color: black;
+  text-align: center;
+  font-size: 1rem;
+  font-family: monospace;
+
+    /* Optional: Use flexbox to customize .modal-item layout */
+  display: flex;
+
+}
+
+/*** Dark Mode ***/
+body.dark-mode { 
+  background-image: url(./image/darkSpiderman.jpg);
+  background-size: cover;
+  color: white;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4 {
+  background-color: lightcoral;
+  color: whitesmoke;
+}
+
+.dark-mode ul {
+  color: whitesmoke;
+}
+
+.dark-mode p{
+  color: whitesmoke;
+}
+
+.dark-mode a:link * {
+  color: lightcoral;
+}
+
+.dark-mode a:visited * {
+  color: yellow;
+}
+
+.dark-mode a:hover * {
+  color: lightblue;
+}
+
+.dark-mode a:active * {
+  color: darkred;
+}
+
+body.dark-mode,
+body.dark-mode .Event-Breakdown-container,
+body.dark-mode .movie-trailers,
+body.dark-mode .rsvp-form-containter {
+  background-color: transparent;
+  border-color: rgb(158, 59, 52);
+}
