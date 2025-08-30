@@ -1,0 +1,14 @@
+# OS junk files
+.DS_Store
+Thumbs.db
+
+# VSCode settings
+.vscode/
+*.code-workspace
+
+# Python/Notebooks (if they exist)
+*.ipynb_checkpoints/
+
+# Windows system folders
+AppData/
+Local Settings/
